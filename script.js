@@ -48,19 +48,21 @@ const addToCart = (item) => {
   const cartItem = document.createElement("div");
   cartItem.innerHTML = `
         
-            <section id="about-sec">
+              <section id="selected-product">
             <div class="about flex-center max-heigth">
                 <div id="intro-1" class="max-heigth flex-center">
-                    <h4>It's me</h4>
-                    <h3 id="name "> KULDEEP KUMAR <br> <i>with my dear brother</i><br> SONU SAINI</h3>
-                    <img src="/images/eCbg2.jpg" alt="it's me">
-                    <P >BCA <br>Graduated from MDU </P>
+                    <h4>The book for </h4>
+                    <h2 id="name ">" ${item.name} "</h2>
+                    <img src="${item.img}" alt="it's your book">
+                    <P >price : $ ${item.price}<br>${item.description}</P>
                 </div>
                 <div id="intro-2" class="max-heigth flex-center">
-                    <h4 id="work">dream WEB DEVELOPER</h4>
+                    <h3 id="work" class="upper-text">author :- " ${item.author} "</h3>
                 </div>
             </div>
             </section>
+            `;
+            
     `;
     cartValue.appendChild(cartItem)
 };
